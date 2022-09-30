@@ -18,8 +18,16 @@ def scan_port(ipaddress, port):
        sock.connect((ipaddress, port))
        print("[+] PORT is Open"+str(port))
        sock.close()
-   except:
-       pass 
+            
+   except KeyboardInterrupt:
+        print("\n Exiting Program !!!!")
+        sys.exit()
+   except socket.gaierror:
+        print("\n Hostname Could Not Be Resolved !!!!")
+        sys.exit()
+   except socket.error:
+        print("\ Server not responding !!!!")
+        sys.exit() 
 
 targets = input("[*] Enter Target To scan split them by ,")
 ports = int(input("[*] Enter how many ports to scan"))
