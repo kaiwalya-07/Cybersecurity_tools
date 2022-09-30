@@ -1,5 +1,5 @@
 
-
+import pyfiglet
 import socket
 import termcolor
 
@@ -29,6 +29,10 @@ def scan_port(ipaddress, port):
         print("\ Server not responding !!!!")
         sys.exit() 
 
+        
+logo = pyfiglet.figlet_format("PORT SCANNER")
+print(logo)
+        
 targets = input("[*] Enter Target To scan split them by ,")
 ports = int(input("[*] Enter how many ports to scan"))
 if ',' in targets:
